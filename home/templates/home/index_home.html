@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1> very welcome</h1>
+    {% for first_level in first_levels %}
+        <div class="btn-group">
+            <a href="{{ first_level.get_absolute_url }}" class="btn btn-danger">{{ first_level.first_level }}</a>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+
+    {% endfor %}
+    <br>
+    <br/>
+
+    {% for de in device %}
+        <div class="btn-group">
+            <a href="{{ de.get_absolute_url }}" class="btn btn-danger">{{ de.name }}</a>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

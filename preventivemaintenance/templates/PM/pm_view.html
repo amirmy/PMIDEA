@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>
+    {{ device.name }}<br/>
+    </h3>
+
+    <h4>
+    {% for i in daily_pm %}
+        {{ i.daily_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+</h4>
+<h4>
+    {% for i in weekly_schedule %}
+        {{ i.weekly_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+</h4>
+    {% for i in monthly_schedule %}
+        {{ i.monthly_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+
+
+    {% for i in season_schedule %}
+        {{ i.season_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+
+    {% for i in sixmonth_schedule %}
+        {{ i.sixmonth_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+
+    {% for i in yearly_schedule %}
+        {{ i.yearly_schedule }}<br/>
+    {% endfor %}
+    <br/>
+    <br/>
+{% endblock %}

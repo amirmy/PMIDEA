@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <form method="post">
+  {% csrf_token %}
+  {{ buy_device_formset.management_form }}
+  {{ buy_brand_formset.management_form }}
+
+  {% for form in buy_device_formset %}
+    {{ form.as_p }}
+  {% endfor %}
+  {% for form in buy_brand_formset %}
+    {{ form.as_p }}
+  {% endfor %}
+
+  <button type="submit">ذخیره</button>
+</form>
+
+
+{% endblock %}

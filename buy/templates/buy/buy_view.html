@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {{ device.name }}<br/>
+    {{ buydevice.Description }}<br/>
+    {{ buydevice.amount_consumption_per_patient }}<br/>
+    <a href="{% url 'buy:create_dynamic_buy' device.slug %}"> create pdf form</a>
+
+
+{% endblock %}

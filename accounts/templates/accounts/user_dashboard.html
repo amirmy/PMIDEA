@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3> {{ dashboard.user.name }}'s dashboard</h3>
+    <p> my bio :
+        {{ dashboard.bio }}</p>
+    <p>{{ dashboard.age }}</p>
+    <small>{{ dashboard.phone }}</small><br>
+    <p>{{ dashboard.user.joined }}</p>
+    {% if request.user.id == dashboard.user.id %}
+        <a href=" {% url 'accounts:edit_dashboard' request.user.id %}">Edit Dashboard</a>
+    {% endif %}
+    <br/>
+
+{% endblock %}

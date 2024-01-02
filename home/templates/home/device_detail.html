@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {{ device.name }}<br />
+    {{ device.description }}<br />
+    {{ device.first_level_category }}<br />
+    {{ device.author }}<br />
+    <a href="{% url 'buy:buy_view' device.slug %}"> buy condition</a>
+    <a href="{% url 'preventivemaintenance:preventivemaintenance_view' device.slug %}"> preventivemaintenance condition</a>
+
+
+{% endblock %}
